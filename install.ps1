@@ -45,7 +45,7 @@ if (Test-Path -LiteralPath $app) {
     Write-Host 'Launching Audit Sarthi...' -ForegroundColor Green
     Start-Process $app
 } else {
-    Write-Warning "Installed but app exe not found at $app — check the installer output above."
+    Write-Warning 'Installed but app exe was not found - check the installer output above.'
 }
 
 Write-Host ''
