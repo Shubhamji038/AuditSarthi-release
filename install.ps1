@@ -14,9 +14,9 @@
 #>
 $ErrorActionPreference = 'Stop'
 
-$Version = '0.1.1'
+$Version = '0.2.0'
 $Repo    = 'Shubhamji038/AuditSarthi-release'
-$Asset   = 'Audit.Sarthi.Setup.0.1.1.exe'
+$Asset   = 'Audit.Sarthi.Setup.0.2.0.exe'
 $Url     = "https://github.com/$Repo/releases/download/v$Version/$Asset"
 $AppDir  = Join-Path $env:LOCALAPPDATA 'Programs\Audit Sarthi'
 
@@ -73,8 +73,8 @@ function Ensure-PythonFallback {
     if (-not $pyExe) { $pyExe = Install-Python }
     if ($pyExe) {
         Write-Host "Python ready: $pyExe"
-        Write-Host 'Installing backend packages (openpyxl requests pywin32)...'
-        & $pyExe -m pip install --upgrade openpyxl requests pywin32
+        Write-Host 'Installing backend packages (openpyxl requests pywin32 pypdf)...'
+        & $pyExe -m pip install --upgrade openpyxl requests pywin32 pypdf
     } else {
         Write-Warning 'Python 3.10+ is missing and could not be installed automatically. Install it from https://www.python.org/downloads/ (tick Add Python to PATH), then re-run extraction.'
     }
