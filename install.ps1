@@ -14,9 +14,9 @@
 #>
 $ErrorActionPreference = 'Stop'
 
-$Version = '0.2.0'
+$Version = '0.2.1'
 $Repo    = 'Shubhamji038/AuditSarthi-release'
-$Asset   = 'Audit.Sarthi.Setup.0.2.0.exe'
+$Asset   = 'Audit.Sarthi.Setup.0.2.1.exe'
 $Url     = "https://github.com/$Repo/releases/download/v$Version/$Asset"
 $AppDir  = Join-Path $env:LOCALAPPDATA 'Programs\Audit Sarthi'
 
